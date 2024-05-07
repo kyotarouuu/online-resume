@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background: #1A4D2E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 100px;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,0.3);
+}
+
+.container .left_side {
+    position: relative;
+    background: #4F6F52;
+    padding: 40px;
+}
+
+.profiletext {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.imgbx {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profiletext .imgbx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profiletext h2 {
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 800px;
+    line-height: 1.4em;
+}
+
+.profiletext h2 span {
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.contactinfo {
+    padding-top: 30px;
+}
+
+.title {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    padding-top: 30px;
+}
+
+.contactinfo ul li{
+    list-style: none;
+    position: relative;
+    margin: 8px 0;
+}
+
+.contactinfo ul li .icon {
+    display: inline-block;
+    width: 25px;
+    font-size: 18px;
+    color: #114232;
+}
+
+.contactinfo ul li span {
+    color: white;
+    font-weight: 300;
+}
+
+.contactinfo.education li {
+    margin-bottom: 15px;
+}
+
+.contactinfo.education h5 {
+    color: #114232;
+    font-weight: 800;
+}
+
+.contactinfo.education h4 {
+    color: white;
+    font-weight: 500;
+}
+
+.contactinfo.language .percent {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #114232;
+    display: block;
+    margin-top: 5px;
+}
+
+.contactinfo.language .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #789461;
+}
+
+.container .right_side {
+    position: relative;
+    background: #E8DFCA;
+    padding: 40px;
+}
+
+.about {
+    margin-bottom: 50px;
+}
+
+.about:last-child {
+    margin-bottom: 0;
+}
+
+.title2 {
+    color: #114232;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding-top: 7px;
+}
+
+p {
+    padding-top: 15px;
+    color: #114232;
+    text-align: justify;
+}
+
+.about .box {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.about .box .exp {
+    min-width: 150px;
+}
+
+.about .box .exp h5 {
+    text-transform: uppercase;
+    color: #1A4D2E;
+    font-weight: 600;
+}
+
+.about .box .text h4 {
+    text-transform: uppercase;
+    color:#114232;
+    font-size: 16px;
+}
+
+.skills .box {
+    position: relative;
+    padding-top: 15px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills .box h4 {
+    text-transform: uppercase;
+    color:#4F6F52;
+    font-weight: 600;
+}
+
+.skills .box .percent {
+    position: relative;
+    width: 100%;
+    height: 17px;
+    border-radius: 15px;
+    background:#789461;
+}
+
+.skills .box .percent div {
+    position: absolute;
+    border-radius: 15px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #1A4D2E;
+}
+
+.hobbies ul {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.hobbies ul li {
+    padding-top: 10px;
+    list-style: none;
+    color: #114232;
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+.hobbies ul li .fa{
+    color: #114232;
+    font-size: 18px;
+    width: 20px;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .hobbies ul {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .about .box {
+        flex-direction: column;
+    }
+    .about .box .exp {
+        margin-bottom: 5px;
+    }
+    .hobbies ul {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .skills .box {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
